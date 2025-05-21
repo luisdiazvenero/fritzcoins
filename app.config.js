@@ -1,0 +1,26 @@
+module.exports = {
+  name: 'bolt-expo-nativewind',
+  slug: 'bolt-expo-nativewind',
+  version: '1.0.0',
+  orientation: 'portrait',
+  icon: './assets/images/icon.png',
+  scheme: 'myapp',
+  userInterfaceStyle: 'automatic',
+  newArchEnabled: true,
+  ios: {
+    supportsTablet: true,
+  },
+  web: {
+    bundler: 'metro',
+    output: 'static',
+    favicon: './assets/images/favicon.png',
+  },
+  plugins: [
+    'expo-router',
+  ],
+  extra: {
+    env: {
+      EXPO_ROUTER_APP_ROOT: 'app',
+    },
+  },
+};

@@ -1,0 +1,58 @@
+{
+  "expo": {
+    "name": "bolt-expo-nativewind",
+    "slug": "bolt-expo-nativewind",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "./assets/images/icon.png",
+    "scheme": "myapp",
+    "userInterfaceStyle": "automatic",
+    "newArchEnabled": true,
+    "ios": {
+      "supportsTablet": true
+    },
+    "web": {
+      "bundler": "metro",
+      "output": "static",
+      "favicon": "./assets/images/favicon.png",
+      "build": {
+        "babel": {
+          "include": ["expo-router"],
+          "plugins": [
+            ["module-resolver", {
+              "root": ["."]
+            }]
+          ]
+        }
+      },
+      "env": {
+        "EXPO_ROUTER_APP_ROOT": "app",
+        "NODE_ENV": "development",
+        "BABEL_ENV": "development",
+        "EXPO_USE_WEBPACK": true
+      }
+    },
+    "extra": {
+      "env": {
+        "EXPO_ROUTER_APP_ROOT": "app",
+        "NODE_ENV": "development",
+        "BABEL_ENV": "development",
+        "EXPO_USE_WEBPACK": true
+      }
+    },
+    "plugins": [
+      [
+        "expo-router",
+        {
+          "origin": "/",
+          "unstable_src": "app",
+          "asyncRoutes": true
+        }
+      ]
+    ],
+    "experiments": {
+      "typedRoutes": true,
+      "tsconfigPaths": true
+    }
+  }
+}

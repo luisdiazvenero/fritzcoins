@@ -1,0 +1,35 @@
+const { getDefaultConfig } = require('expo/metro-config');
+const path = require('path');
+
+const config = {
+  ...getDefaultConfig(__dirname),
+  transformer: {
+    babelTransformerPath: require.resolve('react-native-babel-transformer'),
+    getTransformOptions: async () => ({
+      transform: {
+        experimentalImportSupport: false,
+        inlineRequires: true,
+      },
+    }),
+  },
+  resolver: {
+    sourceExts: ['js', 'jsx', 'ts', 'tsx', 'cjs'],
+    extraNodeModules: {
+      'process': require.resolve('process/browser'),
+      '@expo/metro-runtime': require.resolve('@expo/metro-runtime'),
+      'expo-router': require.resolve('expo-router'),
+    },
+    alias: {
+      process: require.resolve('process/browser'),
+      'expo-router': require.resolve('expo-router'),
+    },
+  },
+};
+
+// Set environment variables
+process.env.EXPO_ROUTER_APP_ROOT = path.resolve(__dirname, 'app');
+process.env.NODE_ENV = 'development';
+process.env.BABEL_ENV = 'development';
+process.env.EXPO_USE_WEBPACK = true;
+
+module.exports = config;
