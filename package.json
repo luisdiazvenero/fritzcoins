@@ -11,7 +11,7 @@
   "vercel": {
     "builds": [
       {
-        "src": "package.json",
+        "src": "dist/index.html",
         "use": "@vercel/static-build"
       }
     ],
