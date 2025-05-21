@@ -10,6 +10,14 @@
     "build:web": "expo export --platform web --no-interactive",
     "local": "node server.js"
   },
+  "build": {
+    "web": {
+      "output": {
+        "path": "dist",
+        "publicPath": "/"
+      }
+    }
+  },
   "expo": {
     "web": {
       "output": {
@@ -72,11 +80,15 @@
   "vercel": {
     "builds": [
       {
-        "src": "index.html",
+        "src": "package.json",
         "use": "@vercel/static-build"
       }
     ],
     "routes": [
+      {
+        "src": "^/_expo/static/js/web/entry.*\\.js$",
+        "dest": "/_expo/static/js/web/entry.*\\.js"
+      },
       {
         "src": "/(.*)",
         "dest": "/index.html"
