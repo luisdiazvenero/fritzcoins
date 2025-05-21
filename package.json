@@ -6,7 +6,17 @@
     "dev": "expo start",
     "build": "expo export --platform web",
     "start": "expo start",
-    "vercel": "expo export --platform web"
+    "vercel": "expo export --platform web",
+    "build:web": "expo export --platform web --no-interactive",
+    "local": "node server.js"
+  },
+  "expo": {
+    "web": {
+      "output": {
+        "path": "dist",
+        "publicPath": "/"
+      }
+    }
   },
   "vercel": {
     "builds": [
