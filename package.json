@@ -11,7 +11,7 @@
   "vercel": {
     "builds": [
       {
-        "src": "index.html",
+        "src": "package.json",
         "use": "@vercel/static-build"
       }
     ],
@@ -42,7 +42,9 @@
     "expo-symbols": "^0.2.2",
     "expo-system-ui": "~2.4.0",
     "expo-web-browser": "~12.3.2",
+    "express": "^5.1.0",
     "lucide-react-native": "^0.475.0",
+    "path": "^0.12.7",
     "process": "^0.11.10",
     "react": "18.2.0",
     "react-dom": "18.2.0",
@@ -56,6 +58,20 @@
     "react-native-url-polyfill": "^2.0.0",
     "react-native-web": "~0.19.9",
     "react-native-webview": "13.2.2"
+  },
+  "vercel": {
+    "builds": [
+      {
+        "src": "index.html",
+        "use": "@vercel/static-build"
+      }
+    ],
+    "routes": [
+      {
+        "src": "/(.*)",
+        "dest": "/index.html"
+      }
+    ]
   },
   "devDependencies": {
     "@babel/core": "^7.27.1",
