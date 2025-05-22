@@ -76,7 +76,7 @@ export const transactions = [
     type: 'earned',
     amount: 150,
     date: '2023-11-01T11:20:45',
-    store: 'FrescoMax',
+    store: 'Salsa Ahumadita 240',
     description: 'Compra de Producto Fritz',
   },
   {

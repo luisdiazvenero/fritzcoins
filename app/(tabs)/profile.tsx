@@ -1,6 +1,6 @@
 import React from 'react';
 import { StyleSheet, View, Text, SafeAreaView, ScrollView, TouchableOpacity, Switch } from 'react-native';
-import { User, Settings, Bell, CircleHelp as HelpCircle, Lock, Wallet, Store, LogOut, Award, ChevronRight } from 'lucide-react-native';
+import { User, Settings, Bell, CircleHelp as HelpCircle, Lock, Factory, Handshake, LogOut, Award, ChevronRight } from 'lucide-react-native';
 import Header from '../../components/Header';
 import UserLevelBadge from '../../components/UserLevelBadge';
 import Colors from '../../constants/Colors';
@@ -81,8 +81,8 @@ export default function ProfileScreen() {
             () => {}
           )}
           {renderMenuItem(
-            <Wallet size={20} color={Colors.primary.default} />,
-            'Métodos de Pago',
+            <Factory size={20} color={Colors.primary.default} />,
+            'Información de Negocio',
             () => {}
           )}
           {renderMenuItem(
@@ -106,8 +106,8 @@ export default function ProfileScreen() {
             />
           )}
           {renderMenuItem(
-            <Store size={20} color={Colors.primary.default} />,
-            'Tiendas Favoritas',
+            <Handshake size={20} color={Colors.primary.default} />,
+            'Vendedor Asignado',
             () => {}
           )}
         </View>

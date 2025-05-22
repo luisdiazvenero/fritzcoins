@@ -98,14 +98,14 @@ export default function WalletScreen() {
               <Text style={styles.statValue}>12</Text>
               <TrendingDown size={16} color={Colors.error.default} style={styles.statIcon} />
             </View>
-            <Text style={styles.statLabel}>Premios Usados</Text>
+            <Text style={styles.statLabel}>Premios Canjeados</Text>
           </View>
           <View style={styles.statCard}>
             <View style={styles.statValueContainer}>
               <Text style={styles.statValue}>15%</Text>
               <TrendingUp size={16} color={Colors.success.default} style={styles.statIcon} />
             </View>
-            <Text style={styles.statLabel}>Este Mes</Text>
+            <Text style={styles.statLabel}>Fritcoins</Text>
           </View>
         </View>
 
