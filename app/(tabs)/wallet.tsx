@@ -21,7 +21,10 @@ export default function WalletScreen() {
             <Text style={styles.levelTitle}>Progreso de Nivel</Text>
             <UserLevelBadge level={userData.level as 'Bronce' | 'Plata' | 'Oro'} size="small" />
           </View>
-          <TouchableOpacity style={styles.levelInfoButton}>
+          <TouchableOpacity 
+            style={styles.levelInfoButton}
+            onPress={() => router.push('/benefits')}
+          >
             <Text style={styles.levelInfoText}>Ver Beneficios</Text>
             <ChevronRight size={16} color={Colors.primary.default} />
           </TouchableOpacity>
