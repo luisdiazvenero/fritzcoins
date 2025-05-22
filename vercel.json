@@ -12,6 +12,10 @@
       "dest": "/_expo/static/js/web/entry.*\\.js"
     },
     {
+      "src": "^/assets/.*$",
+      "dest": "/assets/$1"
+    },
+    {
       "src": "/(.*)",
       "dest": "/index.html"
     }

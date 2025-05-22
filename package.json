@@ -15,6 +15,9 @@
       "output": {
         "path": "dist",
         "publicPath": "/"
+      },
+      "assets": {
+        "fonts": "assets"
       }
     }
   },
