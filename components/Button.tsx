@@ -38,22 +38,22 @@ export default function Button({
   style,
   textStyle,
 }: ButtonProps) {
-  const buttonStyles: ViewStyle[] = [
+  const buttonStyles = StyleSheet.flatten([
     styles.button,
-    styles[`${variant}Button`],
-    styles[`${size}Button`],
-    fullWidth && styles.fullWidth,
-    disabled && styles.disabledButton,
-    style as ViewStyle,
-  ];
+    styles[`${variant}Button` as keyof typeof styles] as ViewStyle,
+    styles[`${size}Button` as keyof typeof styles] as ViewStyle,
+    fullWidth ? styles.fullWidth : {},
+    disabled ? styles.disabledButton : {},
+    style,
+  ]);
 
-  const textStyles: TextStyle[] = [
-    styles.text,
-    styles[`${variant}Text`],
-    styles[`${size}Text`],
-    disabled && styles.disabledText,
-    textStyle as TextStyle,
-  ];
+  const textStyles = StyleSheet.flatten([
+    styles.text as TextStyle,
+    styles[`${variant}Text` as keyof typeof styles] as TextStyle,
+    styles[`${size}Text` as keyof typeof styles] as TextStyle,
+    disabled ? styles.disabledText : {},
+    textStyle,
+  ]);
 
   return (
     <TouchableOpacity

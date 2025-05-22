@@ -33,7 +33,13 @@ export default function LoginScreen() {
   };
 
   const toggleAuthMode = () => {
-    setIsLogin(!isLogin);
+    if (isLogin) {
+      // Si estamos en modo login, redirigir al registro
+      router.push('/register/step1');
+    } else {
+      // Si estamos en modo registro, cambiar a login
+      setIsLogin(true);
+    }
   };
 
   return (
