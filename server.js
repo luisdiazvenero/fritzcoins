@@ -2,7 +2,7 @@ const express = require('express');
 const path = require('path');
 const app = express();
 
-// Serve static files from the dist directory
+// Middleware para servir archivos estáticos
 app.use(express.static('dist'));
 
 // Handle all routes by serving index.html

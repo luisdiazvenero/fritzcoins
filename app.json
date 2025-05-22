@@ -12,19 +12,8 @@
       "supportsTablet": true
     },
     "web": {
-      "bundler": "metro",
       "output": "static",
       "favicon": "./assets/images/favicon.png",
-      "build": {
-        "babel": {
-          "include": ["expo-router"],
-          "plugins": [
-            ["module-resolver", {
-              "root": ["."]
-            }]
-          ]
-        }
-      },
       "env": {
         "EXPO_ROUTER_APP_ROOT": "app",
         "NODE_ENV": "development",

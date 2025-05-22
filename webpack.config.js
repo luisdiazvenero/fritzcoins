@@ -1,7 +1,13 @@
 const { getDefaultConfig } = require('@expo/webpack-config');
+const path = require('path');
 
 module.exports = (env, argv) => {
   const config = getDefaultConfig(env, argv);
+
+  // Configuración para desarrollo local
+  if (argv.mode === 'development') {
+    config.output.publicPath = 'http://localhost:8081/';
+  }
 
   // Add process polyfill
   config.resolve.alias.process = require.resolve('process/browser');
@@ -12,8 +18,8 @@ module.exports = (env, argv) => {
     apply: (compiler) => {
       compiler.hooks.beforeCompile.tap('EnvironmentPlugin', (params) => {
         process.env.EXPO_ROUTER_APP_ROOT = path.resolve(__dirname, 'app');
-        process.env.NODE_ENV = 'development';
-        process.env.BABEL_ENV = 'development';
+        process.env.NODE_ENV = argv.mode;
+        process.env.BABEL_ENV = argv.mode;
         process.env.EXPO_USE_WEBPACK = true;
       });
     },

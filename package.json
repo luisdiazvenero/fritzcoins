@@ -26,22 +26,32 @@
       "output": {
         "path": "dist",
         "publicPath": "/"
+      },
+      "assets": {
+        "fonts": "assets"
       }
     }
   },
   "vercel": {
     "builds": [
       {
-        "src": "dist/index.html",
+        "src": "package.json",
         "use": "@vercel/static-build"
       }
     ],
     "routes": [
       {
+        "src": "^/_expo/static/js/web/entry.*\\.js$",
+        "dest": "/_expo/static/js/web/entry.*\\.js"
+      },
+      {
         "src": "/(.*)",
         "dest": "/index.html"
       }
     ]
+  },
+  "devDependencies": {
+    "@expo/metro-runtime": "^0.10.0"
   },
   "dependencies": {
     "@expo-google-fonts/inter": "^0.2.3",
@@ -49,6 +59,7 @@
     "@expo/vector-icons": "^13.0.0",
     "@lucide/lab": "^0.1.2",
     "@react-native-picker/picker": "2.4.10",
+    "@react-native/metro-config": "^0.79.2",
     "expo": "~49.0.21",
     "expo-blur": "~12.4.1",
     "expo-camera": "~13.4.4",
@@ -79,24 +90,6 @@
     "react-native-url-polyfill": "^2.0.0",
     "react-native-web": "~0.19.9",
     "react-native-webview": "13.2.2"
-  },
-  "vercel": {
-    "builds": [
-      {
-        "src": "package.json",
-        "use": "@vercel/static-build"
-      }
-    ],
-    "routes": [
-      {
-        "src": "^/_expo/static/js/web/entry.*\\.js$",
-        "dest": "/_expo/static/js/web/entry.*\\.js"
-      },
-      {
-        "src": "/(.*)",
-        "dest": "/index.html"
-      }
-    ]
   },
   "devDependencies": {
     "@babel/core": "^7.27.1",
