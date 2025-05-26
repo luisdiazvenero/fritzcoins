@@ -1,6 +1,8 @@
 import { useEffect } from 'react';
 import { Stack } from 'expo-router';
+import { useRouter } from 'expo-router';
 import { StatusBar } from 'expo-status-bar';
+import Head from 'expo-router/head';
 import { useFrameworkReady } from './hooks/useFrameworkReady';
 import { useFonts } from 'expo-font';
 import { Inter_400Regular, Inter_500Medium, Inter_600SemiBold, Inter_700Bold } from '@expo-google-fonts/inter';
@@ -35,6 +37,17 @@ export default function RootLayout() {
 
   return (
     <>
+    <Head>
+        <title>FritzCoins - Tu Billetera Digital</title>
+        <meta name="description" content="Gana, canjea y transfiere FritzCoins con facilidad" />
+        <meta name="theme-color" content="#000000" />
+        <meta property="og:title" content="FritzCoins - Tu Billetera Digital" />
+        <meta property="og:description" content="Gana, canjea y transfiere FritzCoins con facilidad" />
+        <meta property="og:type" content="website" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <link rel="icon" href="/favicon.png" />
+      </Head>
+      
       <Stack screenOptions={{ headerShown: false }}>
         <Stack.Screen 
           name="welcome" 
