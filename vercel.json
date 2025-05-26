@@ -8,15 +8,27 @@
   ],
   "routes": [
     {
-      "src": "^/_expo/static/js/web/entry.*\\.js$",
-      "dest": "/_expo/static/js/web/entry.*\\.js"
+      "src": "/favicon.ico",
+      "dest": "/favicon.ico"
+    },
+    {
+      "src": "/favicon.png",
+      "dest": "/favicon.png"
     },
     {
       "src": "^/assets/.*$",
       "dest": "/assets/$1"
     },
     {
-      "src": "/(.*)",
+      "src": "^/_expo/static/.*$",
+      "dest": "/_expo/static/$1"
+    },
+    {
+      "src": "^/static/.*$",
+      "dest": "/static/$1"
+    },
+    {
+      "src": "^/(.*)$",
       "dest": "/index.html"
     }
   ]
