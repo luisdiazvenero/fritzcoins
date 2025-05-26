@@ -45,7 +45,7 @@ export default function RootLayout() {
         <meta property="og:description" content="Gana, canjea y transfiere FritzCoins con facilidad" />
         <meta property="og:type" content="website" />
         <meta name="twitter:card" content="summary_large_image" />
-        <link rel="icon" href="/assets/images/favicon.png" />
+        <link rel="icon" href="/favicon.png" />
       </Head>
       
       <Stack screenOptions={{ headerShown: false }}>
