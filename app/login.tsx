@@ -9,13 +9,15 @@ import {
   KeyboardAvoidingView,
   Platform,
   ScrollView,
+  Image,
 } from 'react-native';
 import { useRouter } from 'expo-router';
-import { Eye, EyeOff, Coins, ArrowRight } from 'lucide-react-native';
+import { Eye, EyeOff, ArrowRight } from 'lucide-react-native';
 import Button from '../components/Button';
 import Header from '../components/Header';
 import Colors from '../constants/Colors';
 import Layout from '../constants/Layout';
+const FritzCoinsLogo = require('../assets/images/fritzcoins-logo-r.png');
 
 export default function LoginScreen() {
   const router = useRouter();
@@ -58,8 +60,11 @@ export default function LoginScreen() {
           keyboardShouldPersistTaps="handled"
         >
           <View style={styles.logoContainer}>
-            <Coins size={40} color={Colors.primary.default} />
-            <Text style={styles.logoText}>FritzCoins</Text>
+            <Image 
+              source={FritzCoinsLogo} 
+              style={styles.logoImage}
+              resizeMode="contain"
+            />
           </View>
 
           <View style={styles.formContainer}>
@@ -159,14 +164,12 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     justifyContent: 'center',
     alignItems: 'center',
-    marginBottom: Layout.spacing.xxl,
+    marginBottom: 32,
   },
-  logoText: {
-    fontSize: 32,
-    fontWeight: '700',
-    color: Colors.primary.default,
-    marginLeft: Layout.spacing.s,
-    fontFamily: 'Poppins-Bold',
+  logoImage: {
+    width: 300,
+    height: 120,
+    resizeMode: 'contain',
   },
   formContainer: {
     width: '100%',

@@ -15,9 +15,10 @@ import { useRouter } from 'expo-router';
 import { Picker } from '@react-native-picker/picker';
 import Button from '../../components/Button';
 import Header from '../../components/Header';
-import { Coins } from 'lucide-react-native';
+import { Image } from 'react-native';
 import Colors from '../../constants/Colors';
 import Layout from '../../constants/Layout';
+const FritzCoinsLogo = require('../../assets/images/fritzcoins-logo-r.png');
 
 const styles = StyleSheet.create({
   container: {
@@ -37,13 +38,12 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     justifyContent: 'center',
     alignItems: 'center',
-    marginBottom: 48,
+    marginBottom: 32,
   },
-  logoText: {
-    fontSize: 32,
-    fontWeight: 'bold',
-    color: Colors.text.primary,
-    marginLeft: 12,
+  logoImage: {
+    width: 300,
+    height: 120,
+    resizeMode: 'contain',
   },
   formContainer: {
     marginTop: 24,
@@ -333,8 +333,11 @@ export default function RegisterStep2Screen() {
         <ScrollView contentContainerStyle={styles.scrollContent}>
           <View style={styles.content}>
             <View style={styles.logoContainer}>
-              <Coins size={40} color={Colors.primary.default} />
-              <Text style={styles.logoText}>FritzCoins</Text>
+              <Image 
+                source={FritzCoinsLogo} 
+                style={styles.logoImage}
+                resizeMode="contain"
+              />
             </View>
             
             <View style={styles.formContainer}>

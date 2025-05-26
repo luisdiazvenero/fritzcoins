@@ -9,13 +9,15 @@ import {
   Platform,
   TouchableOpacity,
   StyleSheet,
+  Image,
 } from 'react-native';
 import { useRouter } from 'expo-router';
-import { Eye, EyeOff, Coins } from 'lucide-react-native';
+import { Eye, EyeOff } from 'lucide-react-native';
 import Button from '../../components/Button';
 import Header from '../../components/Header';
 import Colors from '../../constants/Colors';
 import Layout from '../../constants/Layout';
+const FritzCoinsLogo = require('../../assets/images/fritzcoins-logo-r.png');
 
 const styles = StyleSheet.create({
   container: {
@@ -35,14 +37,12 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     justifyContent: 'center',
     alignItems: 'center',
-    marginBottom: 48,
+    marginBottom: 32,
   },
-  logoText: {
-    fontSize: 32,
-    fontWeight: '700',
-    color: Colors.primary.default,
-    marginLeft: Layout.spacing.s,
-    fontFamily: 'Poppins-Bold',
+  logoImage: {
+    width: 300,
+    height: 120,
+    resizeMode: 'contain',
   },
   formContainer: {
     width: '100%',
@@ -179,8 +179,11 @@ export default function RegisterStep1Screen() {
         <ScrollView contentContainerStyle={styles.scrollContent}>
           <View style={styles.content}>
             <View style={styles.logoContainer}>
-              <Coins size={40} color={Colors.primary.default} />
-              <Text style={styles.logoText}>FritzCoins</Text>
+              <Image 
+                source={FritzCoinsLogo} 
+                style={styles.logoImage}
+                resizeMode="contain"
+              />
             </View>
             
             <View style={styles.formContainer}>

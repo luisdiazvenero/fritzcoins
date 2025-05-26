@@ -1,10 +1,11 @@
 import React from 'react';
-import { StyleSheet, View, Text, SafeAreaView, ScrollView } from 'react-native';
+import { StyleSheet, View, Text, SafeAreaView, ScrollView, Image } from 'react-native';
 import { useRouter } from 'expo-router';
-import { Coins, ArrowRight, ShoppingCart, Tag, ArrowUpRight, Star } from 'lucide-react-native';
+import { ArrowRight, ShoppingCart, Tag, ArrowUpRight, Star } from 'lucide-react-native';
 import Button from '../components/Button';
 import Colors from '../constants/Colors';
 import Layout from '../constants/Layout';
+const FritzCoinsLogo = require('../assets/images/fritzcoins-logo.png');
 
 export default function WelcomeScreen() {
   const router = useRouter();
@@ -37,8 +38,11 @@ export default function WelcomeScreen() {
       <ScrollView contentContainerStyle={styles.scrollContent}>
         <View style={styles.header}>
           <View style={styles.logoContainer}>
-            <Coins size={40} color={Colors.secondary.default} />
-            <Text style={styles.logoText}>Fritz Coins</Text>
+            <Image 
+              source={FritzCoinsLogo} 
+              style={styles.logoImage}
+              resizeMode="contain"
+            />
           </View>
         </View>
 
@@ -98,12 +102,10 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     justifyContent: 'center',
   },
-  logoText: {
-    fontSize: 40,
-    fontWeight: '700',
-    color: Colors.secondary.default,
-    marginLeft: Layout.spacing.s,
-    fontFamily: 'Poppins-Bold',
+  logoImage: {
+    width: 300,
+    height: 120,
+    resizeMode: 'contain',
   },
   content: {
     padding: Layout.spacing.xl,
