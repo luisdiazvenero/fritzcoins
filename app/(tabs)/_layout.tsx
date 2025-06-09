@@ -1,7 +1,7 @@
 import React from 'react';
 import { Tabs } from 'expo-router';
 import { StyleSheet, Platform } from 'react-native';
-import { Wallet, ShoppingBag, ArrowRightLeft, User } from 'lucide-react-native';
+import { Coins, Gift, Check, User } from 'lucide-react-native';
 import Colors from '../../constants/Colors';
 import Layout from '../../constants/Layout';
 
@@ -20,27 +20,27 @@ export default function TabLayout() {
       <Tabs.Screen
         name="wallet"
         options={{
-          title: 'Billetera',
+          title: 'FritzCoins',
           tabBarIcon: ({ color, size }) => (
-            <Wallet size={size} color={color} />
+            <Coins size={size} color={color} />
           ),
         }}
       />
       <Tabs.Screen
         name="transfer"
         options={{
-          title: 'Transferir',
+          title: 'Gana',
           tabBarIcon: ({ color, size }) => (
-            <ArrowRightLeft size={size} color={color} />
+            <Check size={size} color={color} />
           ),
         }}
       />
       <Tabs.Screen
         name="rewards"
         options={{
-          title: 'Premios',
+          title: 'Canjea',
           tabBarIcon: ({ color, size }) => (
-            <ShoppingBag size={size} color={color} />
+            <Gift size={size} color={color} />
           ),
         }}
       />

@@ -96,7 +96,7 @@ export default function TransferScreen() {
 
   return (
     <SafeAreaView style={styles.container}>
-      <Header title="Transferir FritzCoins" showBackButton={false} />
+      <Header title="Gana FritzCoins" showBackButton={false} />
       
       <KeyboardAvoidingView
         behavior={Platform.OS === 'ios' ? 'padding' : 'height'}
@@ -117,7 +117,7 @@ export default function TransferScreen() {
           
           <View style={styles.formContainer}>
             <View style={styles.inputContainer}>
-              <Text style={styles.inputLabel}>Monto (FritzCoins)</Text>
+              <Text style={styles.inputLabel}>Ingresa tu Código (FritzCoins)</Text>
               <TextInput
                 style={styles.input}
                 value={amount}
@@ -128,6 +128,8 @@ export default function TransferScreen() {
               />
             </View>
             
+            
+            {/* Sección de entrada de destinatario temporalmente deshabilitada
             <View style={styles.inputContainer}>
               <Text style={styles.inputLabel}>Destinatario</Text>
               <View style={styles.recipientInputContainer}>
@@ -148,10 +150,12 @@ export default function TransferScreen() {
               </View>
             </View>
             
+            
             {renderContactsList()}
+            */}
             
             <Button
-              title="Enviar MilCoins"
+              title="Validar Código"
               onPress={handleTransfer}
               variant="primary"
               size="large"
@@ -161,7 +165,7 @@ export default function TransferScreen() {
           </View>
           
           <View style={styles.transactionsContainer}>
-            <Text style={styles.sectionTitle}>Transferencias Recientes</Text>
+            <Text style={styles.sectionTitle}>Códigos Recientes</Text>
             
             {filterTransferTransactions().map((transaction) => (
               <TransactionItem
@@ -176,7 +180,7 @@ export default function TransferScreen() {
             ))}
             
             <TouchableOpacity style={styles.viewAllButton}>
-              <Text style={styles.viewAllText}>Ver Todas las Transferencias</Text>
+              <Text style={styles.viewAllText}>Ver Todas las Transacciones</Text>
             </TouchableOpacity>
           </View>
         </ScrollView>

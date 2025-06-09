@@ -83,7 +83,7 @@ export default function TransactionItem({
       case 'redeemed':
         return 'Puntos Convertidos';
       case 'transfer':
-        return `Transferencia a ${recipient}`;
+        return `Canjeado en ${recipient}`;
       case 'received':
         return `Recibido de ${sender}`;
       default:

@@ -67,9 +67,9 @@ export const transactions = [
     id: 'txn3',
     type: 'transfer',
     amount: 200,
-    date: '2023-11-05T09:30:15',
-    recipient: 'María García',
-    description: 'Transferencia a María García',
+    date: '2023-04-05T09:30:15',
+    recipient: 'FrescoMax',
+    description: 'FritzCoins Canjeados',
   },
   {
     id: 'txn4',
@@ -83,9 +83,9 @@ export const transactions = [
     id: 'txn5',
     type: 'received',
     amount: 300,
-    date: '2023-10-28T18:15:10',
-    sender: 'Carlos Rodríguez',
-    description: 'Transferencia recibida',
+    date: '2023-05-28T18:15:10',
+    sender: 'Megamarket',
+    description: 'FritzCoins Ganados',
   },
 ];
 
@@ -93,10 +93,10 @@ export const transactions = [
 export const rewards = [
   {
     id: 'reward1',
-    name: 'Picante Fritz',
-    description: '240g Enciende la chispa del amor con..',
-    longDescription: 'Enciende la chispa del amor con la salsa picante Fritz. Su picante intenso y sus especias se equilibran para animar sus comidas y momentos, convirtiendo las cenas cotidianas en asuntos apasionantes.',
-    image: 'https://fritzinternational.us/wp-content/uploads/2024/05/FRITZ-PRODUCTO-4-picanteo.png',
+    name: 'Mayonesa Regular FRITZ 375',
+    description: 'La mayonesa que no falla: cremosa, estable y..',
+    longDescription: 'La mayonesa que no falla: cremosa, estable y con sabor auténtico. Perfecta para ensaladas, hamburguesas y producto de alto rendimiento.',
+    image: 'https://fritzinternational.us/pe/wp-content/uploads/sites/3/2024/05/FRITZ-PRODUCTO-2mayonesa-peru.png',
     price: 500, // FritzCoins
     discount: '50% desc.',
     originalPrice: '$10.00',
@@ -107,10 +107,10 @@ export const rewards = [
   },
   {
     id: 'reward2',
-    name: 'Ahumadita Fritz',
-    description: '240g Experimente la calidez de la salsa ..',
-    longDescription: 'Experimente la calidez de la salsa Fritz Bacon, elaborada con amor para transformar sus comidas en preciados recuerdos familiares. Su riqueza ahumada añade profundidad y cariño a cada plato, perfecto para reunirse alrededor de la mesa.',
-    image: 'https://fritzinternational.us/wp-content/uploads/2024/05/FRITZ-PRODUCTO-2chedd.png',
+    name: 'Papas Ralladas',
+    description: 'Agrega un toque crujiente e irresistible a ..',
+    longDescription: 'Agrega un toque crujiente e irresistible a tus hot dogs y hamburguesas. Papas ralladas listas para servir, ideales para tus perros calientes.',
+    image: 'https://cdn4.volusion.store/rdkvp-twsuc/v/vspfiles/photos/FRITZ-papas-fritas-ralladas-12-2T.png',
     price: 750, // FritzCoins
     discount: '30% desc.',
     originalPrice: '$15.00',
@@ -121,10 +121,10 @@ export const rewards = [
   },
   {
     id: 'reward3',
-    name: 'Queso Cheddar Fritz',
-    description: '45g Abrace el reconfortante abrazo de la salsa..',
-    longDescription: 'Abrace el reconfortante abrazo de la salsa Fritz Cheddar, una delicia cremosa hecha para difundir amor con cada cucharada. Ideal para compartir, aporta sonrisas y calidez a tus comidas y reuniones familiares.',
-    image: 'https://fritzinternational.us/wp-content/uploads/2024/05/FRITZ-PRODUCTO-3.png',
+    name: 'Salsa de Tomate FRITZ',
+    description: 'Salsa de tomate con textura suave y ..',
+    longDescription: 'Salsa de tomate con textura suave y sabor casero. Ideal para pastas, pizzas o bases. Rinde más y gusta a todos.',
+    image: 'https://mayorhermanosdaza.com/wp-content/uploads/2024/04/SALSA_A_BASE_DE_TOMATE_FRITZ_BOLSA_3.85KG.png',
     price: 1200, // FritzCoins
     discount: '25% desc.',
     originalPrice: '$20.00',
@@ -135,10 +135,10 @@ export const rewards = [
   },
   {
     id: 'reward4',
-    name: 'Mayonesa Fritz',
-    description: '750g Nuestra mayonesa Fritz te enamorará ..',
-    longDescription: 'Nuestra mayonesa Fritz te enamorará en el primer bocado, por su cremosidad, es una excelente acompañante para tus platos y para complementar la felicidad de tus invitados. SIendo esta la receta original de la mayonesa.',
-    image: 'https://fritzinternational.us/wp-content/uploads/2024/05/FRITZ-PRODUCTO-2Mayonesamayonesa-copia1.png',
+    name: 'Avena Mil',
+    description: 'Avena premium rica en fibra, perfecta ..',
+    longDescription: 'Avena premium rica en fibra, perfecta para desayunos, postres y recetas funcionales. Alta calidad y rendimiento en panadería, cocina saludable y consumo en el hogar.',
+    image: 'https://mibodega.com.ve/wp-content/uploads/2023/01/FRITZ-MIL-AVENA-EN-HOJUELAS-340GR.png.webp',
     price: 600, // FritzCoins
     discount: '40% desc.',
     originalPrice: '$12.00',
@@ -149,9 +149,9 @@ export const rewards = [
   },
   {
     id: 'reward5',
-    name: 'Maíz Fritz',
-    description: '240g Deje que la salsa de maíz Fritz ..',
-    longDescription: 'Deje que la salsa de maíz Fritz endulce sus reuniones con su sabor hogareño, con un toque especiado. Elaborado para celebrar el amor y la unión, es más que una salsa: es una forma de conectar corazones. Con orgullo venezolano.',
+    name: 'Salsas Líquidas FRITZ - Ajo',
+    description: 'Salsa de ajo líquida con aroma intenso ..',
+    longDescription: 'Salsa de ajo líquida con aroma intenso, lista para usar en carnes, aderezos y pastas. Sabor gourmet al instante.',
     image: 'https://fritzinternational.us/wp-content/uploads/2024/05/FRITZ-PRODUCTO-2-145x300.png',
     price: 400, // FritzCoins
     discount: '20% desc.',

@@ -1,7 +1,7 @@
 import React from 'react';
 import { StyleSheet, View, Text, SafeAreaView, ScrollView, TouchableOpacity, Animated } from 'react-native';
 import { useRouter } from 'expo-router';
-import { Coins, History, ChevronRight, TrendingUp, TrendingDown, ArrowRightLeft } from 'lucide-react-native';
+import { Coins, History, ChevronRight, TrendingUp, TrendingDown, Check } from 'lucide-react-native';
 import Header from '../../components/Header';
 import TransactionItem from '../../components/TransactionItem';
 import UserLevelBadge from '../../components/UserLevelBadge';
@@ -44,7 +44,7 @@ export default function WalletScreen() {
   return (
     <SafeAreaView style={styles.container}>
       <Header 
-        title="Mi Billetera" 
+        title="Mis FritzCoins" 
         showBackButton={false}
         rightComponent={
           <TouchableOpacity onPress={() => {/* Navigate to transaction history */}}>
@@ -64,20 +64,20 @@ export default function WalletScreen() {
           
           <View style={styles.buttonsContainer}>
             <Button
-              title="Transferir"
+              title="Gana"
               onPress={() => router.push('/transfer')}
               variant="outline"
               size="medium"
               style={styles.balanceButton}
               leftIcon={
                 <View style={styles.buttonIconContainer}>
-                  <ArrowRightLeft size={20} color={Colors.primary.default} />
+                  <Check size={20} color={Colors.primary.default} />
                 </View>
               }
             />
             <View style={styles.buttonSpacer} />
             <Button
-              title="Canjear"
+              title="Canjea"
               onPress={() => router.push('/rewards')}
               variant="primary"
               size="medium"
